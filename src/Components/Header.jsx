@@ -43,7 +43,7 @@ const Header = () => {
         </div>
 
         <div className={`nav_links ${open ? 'block' : 'hidden'} flex gap-10 px-10`}>
-          {['Home', 'Donation', 'Message', 'About', 'Blog', 'Contact'].map((item, index) => (
+          {['Home', 'Donation', 'Message', 'About', 'Contact'].map((item, index) => (
             <NavLink 
               key={index}
               to={`/${item.toLowerCase()}`} // Correctly format the path

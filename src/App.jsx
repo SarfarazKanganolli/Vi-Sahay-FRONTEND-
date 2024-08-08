@@ -7,14 +7,14 @@ const Donation = lazy(() => import('./Pages/Donation'));
 const Message = lazy(() => import('./Pages/Message'));
 const About = lazy(() => import('./Pages/About'));
 const Contact = lazy(() => import('./Pages/Contact'));
-const Blog = lazy(() => import('./Pages/Blog'));
+const Page_NA = lazy(() => import('./Pages/Page_NA'));
 
 const App = () => {
   return (
     <div className='w-full h-screen'>
       <BrowserRouter>
         <Header />
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<div></div>}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
@@ -22,7 +22,7 @@ const App = () => {
             <Route path="/message" element={<Message />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="*" element={<Blog />} />
+            <Route path="*" element={<Page_NA/>} />
           </Routes>
         </Suspense>
       </BrowserRouter>

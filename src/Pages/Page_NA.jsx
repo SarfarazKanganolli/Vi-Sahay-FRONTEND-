@@ -2,7 +2,7 @@ import React from 'react'
 import Header from '../Components/Header'
 import Error from '../Components/Error'
 
-const Blog = () => {
+const Page_NA = () => {
   return (
     <>
     <Header/>
@@ -11,4 +11,4 @@ const Blog = () => {
   )
 }
 
-export default Blog
+export default Page_NA
