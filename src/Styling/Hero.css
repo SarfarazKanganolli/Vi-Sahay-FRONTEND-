@@ -1,0 +1,91 @@
+*{
+    font-family: 'Dosis','Sans-Serif';
+}
+
+#image1{
+    z-index: 1;
+    height: 90vh;
+}
+
+#main_text{
+    position: absolute;
+    bottom: 20rem;
+    /* margin-left: 25rem; */
+    text-wrap: wrap;
+    text-align: center;
+    font-size: 3rem;
+    width: 40%;
+}
+
+#main_text h1{
+    font-size: 3rem;
+}
+
+#out_box{
+    z-index: 2;
+}
+
+@media (max-width: 768px) {
+    #image1{
+        z-index: 1;
+        height: 60vh;
+    }
+
+    #main_text{
+
+        position: absolute;
+        bottom: 20rem;
+        font-size: 1rem;
+        width: 92%;
+    }
+
+    #out_box {
+        display: none;
+    }
+
+    #box{
+        display: none;
+    
+    }
+
+    #info{
+        margin-top: 1rem;
+    }
+}
+
+
+
+#box{
+    position: absolute;
+    bottom: -3rem;
+    height: auto;
+
+}
+p{
+    font-size: 20px;
+    
+}
+
+.btn{
+    width: 9rem;
+    height: 3rem;
+    background-color: rgb(255, 255, 255);
+    margin-top: 2rem;
+    margin-left: 3rem;
+    outline: none;
+    border: none;
+}
+
+.btn:hover{
+    background-color: black;
+    color: white;
+    
+}
+
+/* ****************   FOR INFO_BOX CSS ************* */
+
+.info_box{
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
