@@ -1,6 +1,6 @@
 
 
-# Vi-Sahay is a modern, responsive web application built using React, Node.js, MongoDB, Express, Tailwind CSS, Twilio for SMS integration, and Stripe for payment processing. This application provides a seamless user experience with a sleek and responsive UI and powerful backend functionalities.
+## Vi-Sahay is a modern, responsive web application built using React, Node.js, MongoDB, Express, Tailwind CSS, Twilio for SMS integration, and Stripe for payment processing. This application provides a seamless user experience with a sleek and responsive UI and powerful backend functionalities.
 
 ## Features
 
