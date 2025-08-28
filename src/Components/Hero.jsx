@@ -40,8 +40,8 @@ const Hero = ({page,description}) => {
         </div>
 
         <div className='flex items-center justify-center'>
-          <div id='main_text' className=' h-86 flex flex-col items-center justify-center'>
-            <h1 className='text-5xl text-white'>{Maintext}</h1>
+          <div id='main_text' className='h-20 lg:h-86 flex flex-col items-center justify-center'>
+            <h1 className='text-base leading-none text-white'>{Maintext}</h1>
 
           </div>
         </div>

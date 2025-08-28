@@ -1,6 +1,9 @@
-import React, { lazy, Suspense } from 'react';
+import React, { lazy, Suspense, useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Header from './Components/Header';
+import Lenis from "lenis";
+import gsap from "gsap";
+import Spinner from './Components/Spinner';
 
 const Home = lazy(() => import('./Pages/Home'));
 const Donation = lazy(() => import('./Pages/Donation'));
@@ -10,11 +13,32 @@ const Contact = lazy(() => import('./Pages/Contact'));
 const Page_NA = lazy(() => import('./Pages/Page_NA'));
 
 const App = () => {
+
+  useEffect(() => {
+  const lenis = new Lenis({
+    lerp: 0.1,
+    duration: 1.2,
+    smoothWheel: true,
+  });
+
+  const rafCallback = (time) => {
+    lenis.raf(time * 5000); // GSAP gives seconds, Lenis expects ms
+  };
+
+  gsap.ticker.add(rafCallback);
+
+  return () => {
+    gsap.ticker.remove(rafCallback);
+    lenis.destroy();
+  };
+}, []);
+
   return (
     <div className='w-full h-screen'>
       <BrowserRouter>
-        <Header />
-        <Suspense fallback={<div></div>}>
+   
+        <Suspense fallback={<Spinner/>}>
+             <Header />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />

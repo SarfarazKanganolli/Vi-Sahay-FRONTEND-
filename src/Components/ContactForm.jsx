@@ -48,7 +48,7 @@ const ContactForm = () => {
                 navigate("/contact")
             }
 
-            console.log(response);
+            // console.log(response);
         } catch (error) {
             console.error("Error caught:", error);
         }finally {
