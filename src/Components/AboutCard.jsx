@@ -3,6 +3,8 @@ import AboutBack from '../assets/bg_3.jpg'
 import AboutInfo from '../assets/event-1.jpg'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const AboutCard = () => {
     useEffect(() => {
@@ -14,14 +16,14 @@ const AboutCard = () => {
 
     return (
         <>
-            <div  data-aos="fade-up"  className='w-full mt-28 mb-20 px-6 sm:px-10 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-6 items-start'>
-                {/* First Section: Image */}
-                <div className='w-full h-60 md:h-full bg-black'>
-                    <img className="w-full h-full object-cover" src={AboutBack} alt="About Background" />
-                </div>
+            <div  data-aos="fade-up"  className='w-full h-auto mt-28 mb-20 px-6 sm:px-10 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-6 items-start'>
+                {/* First Section: Image */}    
+                <div className='w-full h-44 md:h-60 bg-black'>
+                    <LazyLoadImage className="w-full h-full md:h-full object-cover" effect="blur" src={AboutBack} alt="About Background" />
+                </div>  
 
-                {/* Second Section: Text Content */}
-                <div className='pt-8 md:pt-16 px-4 md:px-10 w-full h-full'>
+                {/* Second Section: Text Content */}    
+                <div className='pt-8  px-4 md:px-10 w-full h-full'>
                     <h1 className='text-2xl md:text-3xl mb-4 md:mb-8'>About Us</h1>
                     <p className='pb-6'>
                         <strong className='text-4xl'>O</strong>ur mission is to empower underprivileged communities through education,
@@ -37,7 +39,7 @@ const AboutCard = () => {
 
 
 
-            <div data-aos="fade-up" className=' w-full h-3/5 flex flex-col justify-center items-center relative'>
+            <div data-aos="fade-up" className=' w-full h-3/5 flex flex-col justify-center items-center relative md:pt-10'>
                 <div className='w-4/5 h-full bg-slate-500  '>
                     <img className='w-full h-full object-cover opacity-75' src={AboutInfo} alt="" />
 
